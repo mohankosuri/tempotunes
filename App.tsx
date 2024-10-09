@@ -6,6 +6,7 @@ import Splashscreen from './screens/Splashscreen';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './screens/Home';
+import PlayerScreen from './screens/Playerscreen';
  
  const App = () => {
   const stack=createNativeStackNavigator()
@@ -22,6 +23,7 @@ import Home from './screens/Home';
         <stack.Navigator initialRouteName='splash'>
           <stack.Screen name='splash' component={Splashscreen} options={{headerShown:false}}></stack.Screen>
           <stack.Screen name='home' component={Home} options={{headerShown:false}}></stack.Screen>
+          <stack.Screen name="Player" component={PlayerScreen} />
         </stack.Navigator>
       </NavigationContainer>
        
